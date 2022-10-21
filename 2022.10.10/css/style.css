@@ -120,7 +120,7 @@ line-height: normal;
 line-height: 1.65em;
 }
 .background {
-    background-color:blanchedalmond;
+    background-color: #e8d9c1;
     margin: 0 auto;
 }
 /* 一枚目写真 */
@@ -169,6 +169,7 @@ line-height: 1.65em;
 
 .menu ul {
     display: flex;
+    justify-content: space-between;
 max-width: 1000px;
 margin: 0 auto;
 padding: 10px;
@@ -176,6 +177,7 @@ padding: 10px;
 
 .menu li {
     padding: 0px 20px;
+    width: 30%;
 }
 .menu li img {
     border-radius: 0px 40px 0px 0px;
@@ -256,7 +258,7 @@ time {
     padding-bottom: 45.89px;
     padding-top: 76.02px;
 }
-iframe {
+.footer_wrap iframe {
     width: 100%;
     height: 472px;
 }
@@ -269,7 +271,7 @@ iframe {
 }
 
 .footer_wrap {
-    background-color: white;
+    background-color: #ffffff;
 }
 .footer_logo {
 width: 224.4px;
@@ -285,10 +287,13 @@ line-height: 1.95em;
     right: 20px;
     width: 125px;
 }
-.footer_wrap p {
+footer > p {
     font-size: 16px;
     display:flex;
     justify-content: center;
     padding-top: 83.29px;
     padding-bottom: 77.64px;
+}
+footer {
+    background-color: #ffffff;
 }
