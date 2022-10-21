@@ -169,14 +169,13 @@ line-height: 1.65em;
 
 .menu ul {
     display: flex;
-    justify-content: space-between;
 max-width: 1000px;
 margin: 0 auto;
 padding: 10px;
+justify-content: space-between;
 }
 
 .menu li {
-    padding: 0px 20px;
     width: 30%;
 }
 .menu li img {
@@ -218,6 +217,10 @@ padding: 10px;
 
 /* イベント */
 
+.event_all {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .event_logo {
     width: 156.90px; 
     margin: 0 auto;
@@ -268,6 +271,8 @@ time {
     padding-top: 84.7px;
     max-width: 1000px;
     margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .footer_wrap {
