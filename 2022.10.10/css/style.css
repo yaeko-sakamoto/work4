@@ -98,7 +98,6 @@ width: 100%;
 margin: 0 auto;
 display: flex;
 flex-direction: column;
-margin: 0 auto;
 text-align: center;
 }
 
@@ -112,6 +111,7 @@ padding-top: 114.03px;
 font-size: 82px;
 padding-bottom: 57.86px;
 line-height: 1.17em;
+font-weight: normal;
 }
 .happy_description {
 font-size: 23px;
@@ -122,24 +122,22 @@ line-height: 1.65em;
 .background {
     background-color:blanchedalmond;
     margin: 0 auto;
-    padding: 10px;
 }
 /* 一枚目写真 */
 .main_wrap > img {
-    width: 500px;
-    height: 560px;
     border-radius: 0px 0px 82px 0px;
-    object-fit: cover;
 }
 .main_wrap {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 23.91%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+
 }
 .about_logo {
     width: 271px;
-    height: 61px;
     padding-bottom: 63.84px;
     }
 
@@ -153,17 +151,17 @@ line-height: 1.65em;
     font-size: 16px;
     overflow-wrap: break-word;
     text-align:left;
-    padding-right: 38%;
     letter-spacing: 0.05em;
     line-height: 1.625em;
 }
 .all_text {
-    padding-left: 4.3%;
+    padding-left: 8%;
+    width: 42%;
 }
+/* メニュー */
 
 .menu_logo {
     width: 147px;
-    height: 57px;
     margin: 0 auto;
     padding-top: 101.75px;
     padding-bottom: 46.77px;
@@ -171,8 +169,9 @@ line-height: 1.65em;
 
 .menu ul {
     display: flex;
-    justify-content:space-between;
-padding: 0px 24%;
+max-width: 1000px;
+margin: 0 auto;
+padding: 10px;
 }
 
 .menu li {
@@ -180,7 +179,6 @@ padding: 0px 24%;
 }
 .menu li img {
     border-radius: 0px 40px 0px 0px;
-    object-fit: contain;
 }
 
 .menu  ul h3 {
@@ -191,7 +189,7 @@ padding: 0px 24%;
 .menu li p {
     font-size: 17px;
     overflow-wrap: break-word;
-    padding-top: 43.91px;
+    padding-top: 25.38px;
     line-height: 1.47em;
 }
 
@@ -199,7 +197,6 @@ padding: 0px 24%;
 /* ギャラリー */
 .gaiiery_logo {
     width: 235.76px;
-    height: 60.75px;
     margin: 0 auto;
     padding-top: 93.77px;
     padding-bottom: 27.99px;
@@ -211,14 +208,16 @@ padding: 0px 24%;
     width: 100%;
     padding-bottom: 73.05px;
     margin: 0 auto;
-    object-fit: contain;
+}
+
+.gallery img {
+    width: 20%;
 }
 
 /* イベント */
 
 .event_logo {
-    width: 156.90px;
-    height: 61.11px; 
+    width: 156.90px; 
     margin: 0 auto;
     padding-bottom: 42px;
 }
@@ -226,8 +225,10 @@ padding: 0px 24%;
 .event {
     background-color: white;
     border-style: solid ;
-    margin: 0px 360px 76px 360px ;
     padding: 20px 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .event li {
@@ -235,6 +236,10 @@ padding: 0px 24%;
     display: flex;
     justify-content: start;
     margin: 16px 0px;
+}
+
+.event ul {
+    padding-left: 10%;
 }
 
 time {
@@ -247,9 +252,9 @@ time {
 /* アクセス */
 .access_logo {
     width: 201px;
-    height: 55px;
     margin: 0 auto;
     padding-bottom: 45.89px;
+    padding-top: 76.02px;
 }
 iframe {
     width: 100%;
@@ -258,8 +263,9 @@ iframe {
     /* フッダー */
 .address {
     display: flex;
-    justify-content:center;
     padding-top: 84.7px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .footer_wrap {
@@ -267,7 +273,6 @@ iframe {
 }
 .footer_logo {
 width: 224.4px;
-height: 35.2px;
 margin-right: 61px;
 }
 .address li {
@@ -279,7 +284,6 @@ line-height: 1.95em;
     bottom: 20px;
     right: 20px;
     width: 125px;
-    height: 125px;
 }
 .footer_wrap p {
     font-size: 16px;
