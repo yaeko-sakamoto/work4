@@ -8,6 +8,7 @@
     <title>カフェのサイト</title>
     <meta name="description" content="デザインカフェのサイトです。">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -25,24 +26,38 @@
                     <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
+            <div class="hum_menu_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#aboutas">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <div class="slider">
         <p>
-            <img src="images/images/pc_first-100.jpg" alt="カフェの様子の画像">
+            <picture>
+                <source srcset="images/images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                <img src="images/images/pc_first-100.jpg" alt="カフェの様子の画像">
+            </picture>
         </p>
     </div>
     <div class="background">
         <!-- 頭見出し -->
         <div class="happy">
             <h2 class="happy_subtitle">Have a happy day From a cup of coffee.</h2>
-            <p class="happy_heading">ハッピーに溢れる1日を<br>杯のコーヒーから。</p>
+            <p class="happy_heading">ハッピーに溢れる1日を<br>1杯のコーヒーから。</p>
             <p class="happy_description">
-                毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。
+                毎日を丁寧に大切に過ごしたい。<br class="phone">だからこそ一杯一杯丁寧にコーヒーを入れ<br>足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。
             </p>
         </div>
         <!-- 一枚目写真 -->
         <section class="main_wrap">
+            <h3 class="about_logo_sp"><img src="images/images/about_us@2x.png" alt="ABOUTUSのロゴ"></h3>
             <img src="images/images/pc_about-100.jpg" id="aboutas" alt="コーヒーの写真">
             <div class="all_text">
                 <h3 class="about_logo"><img src="images/images/about_us@2x.png" alt="ABOUTUSのロゴ"></h3>
@@ -57,7 +72,8 @@
             <h3 class="menu_logo"><img src="images/images/menu@2x.png" id="menu" alt="MENUのロゴ"></h3>
             <div class="menu">
                 <ul>
-                    <li><img src="images/images/pc_menu_drink-100.jpg" alt="ドリンクの写真">
+                    <li>
+                        <img src="images/images/pc_menu_drink-100.jpg" alt="ドリンクの写真">
                         <h3>Drink</h3>
                         <p>ドリンクメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                     </li>
@@ -127,9 +143,15 @@
             </div>
             <p>© 2021 DESIGN CAFE</p>
         </footer>
-
     </div>
-
+    <script>
+        $(function () {
+            $(".hum_menu_btn").on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.hum_menu_btn').toggleClass('open');
+            });
+        });
+    </script>
 
 </body>
 

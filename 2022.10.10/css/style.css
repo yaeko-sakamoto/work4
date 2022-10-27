@@ -93,6 +93,13 @@ img {
 .slider img {
 width: 100%;
 }
+/* スマホメニュー */
+.hum_menu_btn,
+.sp_nav {
+    display: none;
+}
+
+
 /* 頭見出し */
 .happy {
 margin: 0 auto;
@@ -123,6 +130,9 @@ line-height: 1.65em;
     background-color: #e8d9c1;
     margin: 0 auto;
 }
+.phone {
+    display: none;
+}
 /* 一枚目写真 */
 .main_wrap > img {
     border-radius: 0px 0px 82px 0px;
@@ -139,6 +149,11 @@ line-height: 1.65em;
 .about_logo {
     width: 271px;
     padding-bottom: 63.84px;
+    }
+.about_logo_sp {
+    width: 271px;
+    padding-bottom: 63.84px;
+    display: none;
     }
 
 .about_heading {
@@ -265,7 +280,7 @@ time {
     width: 100%;
     height: 472px;
 }
-    /* フッダー */
+/* フッター */
 .address {
     display: flex;
     padding-top: 84.7px;
@@ -301,4 +316,172 @@ footer > p {
 }
 footer {
     background-color: #ffffff;
+}
+
+/* スマホメニュー */
+
+@media screen and (max-width:1100px) {
+    .pc_nav {
+        display: none;
+    }
+
+    .hum_menu_btn {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        height: 33px;
+        z-index: 9999;
+    }
+
+    .hum_menu_btn span {
+        background: #fff;
+        display: block;
+        height: 3px;
+        width: 33px;
+        position: relative;
+        top: 10px;
+        transition: 0.3s;
+    }
+
+    .hum_menu_btn span::before,
+    .hum_menu_btn span::after {
+        content: '';
+        background: #ffffff;
+        display: block;
+        height: 3px;
+        width: 33px;
+        position: absolute;
+        transition: 0.3s;
+
+    }
+    .hum_menu_btn span::before {
+        bottom: 10px;
+    }
+    .hum_menu_btn span::after  {
+        top: 10px;
+    }
+
+    .open span {
+        background: transparent;
+    }
+
+    .open span::before {
+        bottom: 0px;
+        transform: rotate(45deg);
+    }
+    .open span::after  {
+        top: 0px;
+        transform: rotate(135deg);
+    }
+.sp_nav {
+    height: 100vh;
+    background:rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.sp_nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.sp_nav li {
+    color: #fff;
+    text-align: center;
+    font-size: 17px;
+    padding: 15px 0;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+    "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;;
+}
+.happy {
+    display: block;
+}
+.happy_subtitle {
+    font-size: 5vw;
+}
+.happy_heading {
+    font-size: 10.111vw;
+}
+.happy_description {
+    font-size: 4.6vw;
+    margin: 0 25px;
+    text-align: center;
+}
+.phone {
+    display: block;
+}
+.about_heading {
+    font-size: 36px;
+}
+}
+
+
+@media screen and (max-width:767px) {
+    .about_logo_sp {
+        width: 271px;
+        padding-bottom: 20px;
+        display: block;
+        margin: 0 auto;
+        }
+    .main_wrap {
+        display: block;
+        padding: 0px;
+    }
+    .main_wrap > img {
+        width: 100%;
+        border-radius:0px;
+        margin: 0 auto;
+    }
+    .all_text {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .all_text img {
+        display: none;
+    }
+
+.menu ul {
+    display: block;
+}
+.menu li {
+    margin: 0 auto;
+    width: 90%;
+}
+.menu li img {
+    width: 100%;
+}
+.menu p {
+    padding-bottom: 61px;
+}
+.gaiiery_logo {
+    padding-top: 32.77px;
+}
+.event li {
+    display: block;
+    font-size: 16px;
+}
+.event p {
+    padding: 7px;
+}
+
+.footer_wrap iframe {
+    height: auto;
+}
+.address {
+    display: block;
+}
+.address li {
+    font-size: 18px;
+}
+footer > p {
+    padding-top: 48px;
+    padding-bottom: 36.7px;
+}
 }
