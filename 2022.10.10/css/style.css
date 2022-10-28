@@ -136,6 +136,7 @@ line-height: 1.65em;
 /* 一枚目写真 */
 .main_wrap > img {
     border-radius: 0px 0px 82px 0px;
+    width: 50%;
 }
 .main_wrap {
     display: flex;
@@ -324,12 +325,14 @@ footer {
     .pc_nav {
         display: none;
     }
-
+.logo {
+    width: 187.5px;
+}
     .hum_menu_btn {
         display: block;
         position: absolute;
-        top: 10px;
-        right: 10px;
+        top: 18.23px;
+        right: 20.76px;
         cursor: pointer;
         height: 33px;
         z-index: 9999;
@@ -403,19 +406,25 @@ footer {
 }
 .happy_subtitle {
     font-size: 5vw;
+    padding-top: 44.47px;
+    padding-bottom: 38.11px;
 }
 .happy_heading {
     font-size: 10.111vw;
+    padding-bottom: 28.23px;
 }
 .happy_description {
     font-size: 4.6vw;
     margin: 0 25px;
     text-align: center;
+padding-bottom: 66.35px;
 }
 .phone {
     display: block;
 }
 .about_heading {
+    padding-top: 37.47px;
+    padding-bottom: 37.63;
     font-size: 36px;
 }
 }
@@ -423,8 +432,8 @@ footer {
 
 @media screen and (max-width:767px) {
     .about_logo_sp {
-        width: 271px;
-        padding-bottom: 20px;
+        width: 160.03px;
+        padding-bottom: 18.23px;
         display: block;
         margin: 0 auto;
         }
@@ -443,7 +452,7 @@ footer {
         margin: 0 auto;
         padding: 0 20px;
     }
-    .all_text img {
+    .about_logo {
         display: none;
     }
 
@@ -452,7 +461,7 @@ footer {
 }
 .menu li {
     margin: 0 auto;
-    width: 90%;
+    width: 85%;
 }
 .menu li img {
     width: 100%;
@@ -460,15 +469,35 @@ footer {
 .menu p {
     padding-bottom: 61px;
 }
+.menu_logo {
+    width: 87.84px;
+    padding-top: 57.88px;
+    padding-bottom: 16.52px;
+}
 .gaiiery_logo {
-    padding-top: 32.77px;
+    width: 142.26px;
+    padding-top: 36.41px;
+    padding-bottom: 18.35px;
+}
+.gallery {
+    padding-bottom: 36.47px;
+}
+.event {
+    padding: 10px;
+}
+.event ul {
+    padding-left: 22.33px;
 }
 .event li {
     display: block;
     font-size: 16px;
 }
 .event p {
-    padding: 7px;
+    padding: 7px 0;
+}
+.event_logo {
+    width: 100.86px;
+    padding-bottom: 21.83px;
 }
 
 .footer_wrap iframe {
@@ -480,8 +509,22 @@ footer {
 .address li {
     font-size: 18px;
 }
+.access_logo {
+    width: 124.07px;
+    padding-top: 33.88px;
+    padding-bottom: 7.058px;
+}
+.address {
+    padding-top: 46.54px;
+}
+.footer_logo {
+    padding-bottom: 33.88px;
+}
 footer > p {
     padding-top: 48px;
     padding-bottom: 36.7px;
+}
+.top_botton {
+    width: 100px;
 }
 }
