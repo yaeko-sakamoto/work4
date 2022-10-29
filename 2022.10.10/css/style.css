@@ -319,6 +319,9 @@ footer {
     background-color: #ffffff;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 /* スマホメニュー */
 
 @media screen and (max-width:1100px) {
@@ -494,6 +497,9 @@ padding-bottom: 66.35px;
 }
 .event p {
     padding: 7px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .event_logo {
     width: 100.86px;
