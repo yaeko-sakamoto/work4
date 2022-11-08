@@ -7,8 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>カフェのサイト</title>
     <meta name="description" content="デザインカフェのサイトです。">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" href="css/lightbox.css">
 </head>
 
 <body>
@@ -43,6 +48,12 @@
             <picture>
                 <source srcset="images/images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
                 <img src="images/images/pc_first-100.jpg" alt="カフェの様子の画像">
+            </picture>
+        </p>
+        <p>
+            <picture>
+                <source srcset="images/images/sp_main_vs_2@2x-100.jpg" media="(max-width:767px)">
+                <img src="images/images/slider_2.jpg" alt="カフェの様子の画像">
             </picture>
         </p>
     </div>
@@ -95,12 +106,32 @@
         <section>
             <h3 class="gaiiery_logo"><img src="images/images/gallery@2x.png" id="gallery" alt="GALLERYのロゴ"></h3>
             <div class="gallery">
-                <img src="images/images/pc_gallary_05-100.jpg" alt="店内賑わいの写真">
-                <img src="images/images/pc_gallary_04-100.jpg" alt="コーヒー豆の写真">
-                <img src="images/images/pc_gallary_03-100.jpg" alt="店内の雰囲気の写真">
-                <img src="images/images/pc_gallary_02-100.jpg" alt="店内照明の写真">
-                <img src="images/images/pc_gallary_01-100.jpg" alt="カフェラテの写真">
+                <p><a href="images/images/pc_gallary_05-100.jpg" rel="lightbox[sample-group]"><img
+                            src="images/images/pc_gallary_05-100.jpg" alt="店内賑わいの写真" width="100" /></a></p>
+                <p><a href="images/images/pc_gallary_04-100.jpg" rel="lightbox[sample-group]"><img
+                            src="images/images/pc_gallary_04-100.jpg" alt="コーヒー豆の写真" width="100" /></a></p>
+                <p><a href="images/images/pc_gallary_03-100.jpg" rel="lightbox[sample-group]"><img
+                            src="images/images/pc_gallary_03-100.jpg" alt="店内の雰囲気の写真" width="100" /></a></p>
+                <p><a href="images/images/pc_gallary_02-100.jpg" rel="lightbox[sample-group]"><img
+                            src="images/images/pc_gallary_02-100.jpg" alt="店内照明の写真" width="100" /></a></p>
+                <p><a href="images/images/pc_gallary_01-100.jpg" rel="lightbox[sample-group]"><img
+                            src="images/images/pc_gallary_01-100.jpg" alt="カフェラテの写真" width="100" /></a></p>
+                <p><a href="images/images/m-o-e-yMrmEd-GjJU-unsplash.jpg" rel="lightbox[sample-group]"><img
+                            src="images/images/m-o-e-yMrmEd-GjJU-unsplash.jpg" alt="ケーキセットの写真" width="100" /></a></p>
             </div>
+            <style>
+                .slick-next {
+                    right: 0 !important;
+                }
+
+                .slick-prev {
+                    left: 0 !important;
+                }
+
+                .slick-arrow {
+                    z-index: 2 !important;
+                }
+            </style>
         </section>
         <!-- イベント -->
         <section class="event_all">
@@ -149,13 +180,41 @@
     </div>
     <script>
         $(function () {
-            $(".hum_menu_btn").on('click', function () {
+            $(".hum_menu_btn,.sp_nav li").on('click', function () {
                 $('.sp_nav').fadeToggle();
                 $('.hum_menu_btn').toggleClass('open');
             });
+            $(".slider").slick({
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+            });
+            $(".gallery").slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: true,
+                infinite: true,
+                // レスポンシブ
+                responsive: [{
+                    breakpoint: 2000,
+                    settings: {
+                        slidesToShow: 5,
+                        slideToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slideToShow: 1,
+                        slideToScroll: 1,
+                    }
+                }],
+            });
         });
     </script>
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/lightbox.js" type="text/javascript"></script>
 </body>
 
 </html>

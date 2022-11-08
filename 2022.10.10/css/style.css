@@ -64,6 +64,7 @@ img {
     left: 0;
     width: 100%;
     box-sizing: border-box;
+    z-index: 100;
 }
 
 .logo {
@@ -89,9 +90,20 @@ img {
 .pc_nav ul li:last-child {
     margin-right: 0;
 }
-
 .slider img {
 width: 100%;
+}
+.slick-dots {
+    bottom: 20px;
+}
+.slick-dots li.slick-active button:before {
+    color: white;
+}
+.slick-dots li button:before {
+    color: white;
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
 }
 /* スマホメニュー */
 .hum_menu_btn,
@@ -228,9 +240,37 @@ justify-content: space-between;
 }
 
 .gallery img {
-    width: 20%;
+    width: 100%;
+height: auto;
+}
+.slick-next {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 0px;
+    margin-right: 22%;
+    border-top: solid 5px #fff;
+    border-right: solid 5px #fff;
+    transform: rotate(45deg);
+    top: 35%;
+    padding: 7px;
+}
+.slick-prev {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 0px;
+    margin-left: 22%;
+    border-top: solid 5px #fff;
+    border-right: solid 5px #fff;
+    transform: rotate(-135deg);
+    top: 35%;
+    padding: 7px;
 }
 
+.slick-prev:before, .slick-next:before {
+    display: none;
+}
 /* イベント */
 
 .event_all {
@@ -484,6 +524,11 @@ padding-bottom: 66.35px;
 }
 .gallery {
     padding-bottom: 36.47px;
+}
+.gallery img {
+    max-width: 767px;
+    margin: 0 auto;
+    height: auto;
 }
 .event {
     padding: 10px;
