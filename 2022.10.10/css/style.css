@@ -578,4 +578,10 @@ footer > p {
 .top_botton {
     width: 100px;
 }
+.slick-next {
+    margin-right: 3%;
+}
+.slick-prev {
+    margin-left: 3%;
+}
 }
