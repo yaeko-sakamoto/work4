@@ -252,7 +252,7 @@ height: auto;
     border-top: solid 5px #fff;
     border-right: solid 5px #fff;
     transform: rotate(45deg);
-    top: 35%;
+    top: 30%;
     padding: 7px;
 }
 .slick-prev {
@@ -264,7 +264,7 @@ height: auto;
     border-top: solid 5px #fff;
     border-right: solid 5px #fff;
     transform: rotate(-135deg);
-    top: 35%;
+    top: 30%;
     padding: 7px;
 }
 
@@ -580,8 +580,12 @@ footer > p {
 }
 .slick-next {
     margin-right: 3%;
+    top: 40%;
 }
 .slick-prev {
     margin-left: 3%;
+    top: 40%;
 }
+
+
 }
